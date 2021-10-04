@@ -1,12 +1,12 @@
 #!/bin/bash
 
-> /etc/machine-id
-> /var/lib/dbus/machine-id
+sudo truncate -s 0 /etc/machine-id
+sudo truncate -s 0 /var/lib/dbus/machine-id
 
-rm -rf /etc/udev/rules/*
+sudo rm -rf /etc/udev/rules/* || true
 
-cloud-init clean --logs
+sudo cloud-init clean --logs
 
-passwd -l root
+sudo passwd -l root
 
 echo "Setup Done"

@@ -19,10 +19,10 @@ sudo usermod -aG docker $USER
 # Install Docker-Compose V2
 
 sudo mkdir -p /usr/local/lib/docker/cli-plugins
-sudo curl -SL https://github.com/docker/compose/releases/download/v2.0.0/docker-compose-linux-amd64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
 sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
 # Check versions
 
 docker --version
-docker compose --version
+#docker compose --version
