@@ -36,7 +36,7 @@ build {
   }
   provisioner "shell" {
     scripts = [
-      "scripts/setup-docker.sh"
+      "scripts/setup-docker.sh",
       "scripts/cloud-ready.sh"
     ]
   }
