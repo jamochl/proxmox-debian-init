@@ -17,6 +17,11 @@ source "proxmox-clone" "debian11-docker-template" {
   token                    = var.PM_API_TOKEN_SECRET
   insecure_skip_tls_verify = true
   node                     = var.PM_NODE
+  memory                   = 2048
+  os                       = "l26"
+  model                    = "virtio"
+  scsi_controller          = "virtio-scsi-pci"
+  full_clone               = true
   clone_vm                 = "debian11-setup"
   ssh_username             = "james"
 
