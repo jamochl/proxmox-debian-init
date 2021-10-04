@@ -19,11 +19,14 @@ source "proxmox-clone" "debian11-docker-template" {
   node                     = var.PM_NODE
   memory                   = 2048
   os                       = "l26"
-  model                    = "virtio"
-  scsi_controller          = "virtio-scsi-pci"
-  full_clone               = true
-  clone_vm                 = "debian11-setup"
-  ssh_username             = "james"
+  network_adapters {
+    model  = "virtio"
+    bridge = "vmbr0"
+  }
+  scsi_controller = "virtio-scsi-pci"
+  full_clone      = true
+  clone_vm        = "debian11-setup"
+  ssh_username    = "james"
 
   template_description = "Podman Debian Image to use"
   template_name        = "debian11-docker-template"
