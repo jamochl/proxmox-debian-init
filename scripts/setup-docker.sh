@@ -25,4 +25,4 @@ sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 # Check versions
 
 docker --version
-#docker compose --version
+docker compose version
