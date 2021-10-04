@@ -34,4 +34,9 @@ build {
       "sudo apt update && sudo apt upgrade -y",
     ]
   }
+  provisioner "shell" {
+    scripts = [
+      "scripts/cloud-ready.sh"
+    ]
+  }
 }
