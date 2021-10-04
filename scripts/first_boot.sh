@@ -1,7 +1,7 @@
 #!/bin/bash -ex
 
 apt update && apt upgrade -y
-apt install sudo cloud-init qemu-guest-agent vim unattended-upgrades
+apt install sudo cloud-init qemu-guest-agent vim unattended-upgrades git
 
 if grep --quiet 'ssh_deletekeys: \w*' /etc/cloud/cloud.cfg; then
     echo -e "\nssh_deletekeys: true" >> /etc/cloud/cloud.cfg
