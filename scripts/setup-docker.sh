@@ -18,7 +18,8 @@ sudo usermod -aG docker $USER
 
 # Install Docker-Compose V2 + V1
 
-sudo apt install -y docker-compose-plugin docker-compose
+sudo apt install -y docker-compose-plugin python3-pip
+sudo pip3 install docker-compose
 
 # Check versions
 
