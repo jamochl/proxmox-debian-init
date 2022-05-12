@@ -16,13 +16,12 @@ echo \
 sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 
-# Install Docker-Compose V2
+# Install Docker-Compose V2 + V1
 
-sudo mkdir -p /usr/local/lib/docker/cli-plugins
-sudo curl -SL https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
-sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+sudo apt install -y docker-compose-plugin docker-compose
 
 # Check versions
 
 docker --version
 docker compose version
+docker-compose version
